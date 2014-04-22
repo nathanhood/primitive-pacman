@@ -5,7 +5,17 @@ html(lang='en')
     title Client Template
     link(rel='stylesheet', href='./css/app.css')
   body
-    h1 Client Template
+    h1 Primitive Pacman
+
+    button#start Start
+
+    table#map
+      tbody
+        - for(var i = 0; i < 3; i++)
+          tr
+            - for(var j = 0; j < 2; j++)
+              td(data-x=j, data-y=i)
+
 
     script(src='./js/vendor/jquery-2.1.0.js')
     script(src='./js/source/main.js')
